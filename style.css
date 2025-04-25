@@ -1,0 +1,156 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body,html
+{
+  height: 100%;
+}
+
+.container
+{
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #153677, #4e085f);
+  display: flex;
+  align-items: center;
+}
+.todolist
+{
+  width: 50%;
+  margin: 0px auto 50px;
+  /* border: 5px solid red; */
+  background-color: white;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+  margin-top: -200px;
+}
+.todolist h2
+{
+  color: #002765;
+  /* align-items: center; */
+  padding-bottom : 20px;
+  font-size: 1.9em;
+  text-align: left;
+  display: flex;
+}
+.logo
+{
+  
+  width: 10%;
+  margin-left: 10px;
+}
+
+.row
+{
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #edeef0;
+  padding-left: 10px;
+  font-size: 16px;
+  margin-bottom: 30px;
+  border-radius: 20px;
+}
+#input-box
+{
+  flex: 1;
+  border: none;
+  outline: none;
+  background:transparent;
+  padding: 10px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+button
+{
+  border: none;
+  background-color: orange;
+  font-size: 20px;
+  padding: 16px 40px;
+  border-radius: 50px;
+  /* border: 5px solid black; */
+  cursor: pointer;
+  font-size: 1.3em;
+}
+
+#list_container
+{
+  margin-left: 30px;
+  max-width: 100%;
+  /* border: 2px solid rebeccapurple; */
+}
+
+#list_container li
+{
+  margin-top: -10px;
+  /* border: 2px solid red; */
+  list-style: none;
+  padding: 10px 5px 10px 20px;
+  /* padding-left: 25px; */
+  user-select:  none;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 1.2em;
+  position: relative;
+  font-size: 1.8em;
+    /*  this below three line code was to make the long text into break into maxwidth of the list_container*/
+  word-wrap: break-word;
+  overflow-wrap: break-word;  
+  white-space: normal;
+  /* line-height: 1.5em; */
+padding-top: -10px;  
+}
+
+ul li::before
+{
+  content: '';
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+    top: 15px;
+  /* background-color: rebeccapurple; */
+  background-image: url(images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  left: -25px;
+}
+
+
+
+.checked
+{
+  text-decoration: line-through;
+  color: #555;
+}
+.checked::before
+{
+  background-image: url(images/checked.png);
+}
+
+
+
+ul li span
+{
+  /* border: 1px solid rebeccapurple; */
+  position: absolute;
+  right: 0;
+  top:0px;
+  text-align: center;
+  /* align-items: center; */
+  width: 40px;
+  height: 40px;
+  color: #555;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 1.5em;
+}
+ul li span:hover
+{
+  color: red;
+}
